@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Permanent Marker", cursive;
+    user-select: none;
+}
+
+#canvas{
+    border: solid 3px black;
+    margin-top: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#score{
+    color: black;
+    font-size: 45px;
+    margin: 15px;
+    text-shadow: 0px 0px 2px black;
+    margin-top: 0;
+}
+
+#reset{
+    font-size: 24px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    transition: 0.5s background-color ease-in-out;
+    margin: 10px;
+    margin-top: 0;
+    box-shadow: 0px 0px 2px black;
+}
+
+#reset:hover{
+    background-color: darkgreen;
+}
+
+#title{
+    color: green;
+    text-shadow: 0px 0px 2px black;
+    font-size: 30px;
+    margin: 25px;
+    margin-top: 0;
+    cursor: pointer;
+    transition: 0.2 transform ease-in-out;
+    animation: title 3s infinite;
+}
+
+@keyframes title {
+    0%{ transform: scale(1); }
+    50%{ transform: scale(1.1);}
+    100%{ transform: scale(1);}
+}
+
+.buttons {
+    display: grid;
+    margin-top: 15px;
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+    gap: 25px; /* space between buttons */
+    width: fit-content; /* adjusts to button sizes */
+}
+
+.buttons {
+    display: none;
+}
+
+.buttons button {
+    background-color: darkcyan;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    color: whitesmoke;
+    font-size: 18px;
+    transition: 0.2s all ease-in-out;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: rgb(0, 91, 91);
+}
+
+@media only screen and (max-width: 600px) {
+    .buttons {
+        display: grid;
+    }
+}
